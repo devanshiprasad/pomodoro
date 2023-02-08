@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="popup.css" />
+    <title>Pomodoro Timer</title>
+  </head>
+  <body>
+    <audio id="myAudio">
+      <source src="lofi-hip-hop-11489.mp3">
+    </audio>
+    <div class="header">
+      <img src="../icons8-tomato-64.png" />
+    </div>
+    <div id="reset">
+    <h1 id="time">00:00 </h1> 
+    </div>
+
+    <div id="btn-container">
+      <button id="reset-timer-btn">Reset Timer</button>
+      <button id="start-timer-btn">Start Timer</button>
+      <button id="add-break-btn">Short Break</button>
+      <button id="long-break-btn"> Long Break</button>
+    </div>
+    <div id="audio">
+      <button id="lofi" class="lofi"  onclick="playAudio()" type="button"> Lo-fi music</button>
+    </div>
+    <script>
+      var x = document.getElementById("myAudio"); 
+      
+      function playAudio() { 
+        x.play(); 
+      } 
+      
+      function pauseAudio() { 
+        x.pause(); 
+      } 
+      </script>
+  </body>
+  <script src="popup.js"></script>
+</html>
